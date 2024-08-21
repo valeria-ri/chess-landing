@@ -1,0 +1,24 @@
+.lecture {
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.lecture__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.lecture__img-span {
+  /* display: block; */
+  display: none;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.lecture__image {
+  width: 394px;
+  height: auto;
+  object-fit: contain;
+}

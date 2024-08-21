@@ -8,6 +8,15 @@
 }
 
 @font-face {
+  font-family: "Merriweather";
+  src: 
+  url(./Merriweather/Merriweather-Bold.woff) format("woff"),
+  url(./Merriweather/Merriweather-Bold.eot) format("embedded-opentype"),
+  url(./Merriweather/Merriweather-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
   font-family: "Golos";
   src: 
   url(./Golos/GolosText-Regular.woff) format("woff"),
