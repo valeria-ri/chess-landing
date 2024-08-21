@@ -43,6 +43,15 @@
   text-transform: uppercase;
 }
 
+.title {
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
 .subtitle {
   margin: 0;
   font-family: 'Merriweather', serif;
@@ -57,6 +66,10 @@
   font-size: 20px;
   line-height: 120%;
   font-weight: 400;
+}
+
+.medium-text {
+  font-weight: 500;
 }
 
 .semi-bold-text {
