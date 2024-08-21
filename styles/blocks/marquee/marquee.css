@@ -29,7 +29,7 @@
   align-items: center;
   justify-content: space-around;
   gap: 12px;
-  animation: movement 20s linear infinite;
+  animation: movement 30s linear infinite;
 }
 
 .marquee__item {

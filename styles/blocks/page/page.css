@@ -3,6 +3,7 @@
   --beige-color: #E9DED4;
   --black-color: #313131;
   --black-bg-color: #1F1F1F;
+  --yellow-color: #FBCE51;
   --red-color: #F54932;
   width: 100vw;
   min-height: 100vh;
@@ -48,6 +49,7 @@
   line-height: 130%;
   text-align: center;
   text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .button_black {
@@ -55,8 +57,19 @@
   color: var(--white-color);
 }
 
+.button_black:hover {
+  background-color: var(--yellow-color);
+  color: var(--black-bg-color);
+}
+
 .button_transparent {
+  background-color: transparent;
   color: var(--black-bg-color);
   outline: 2px solid var(--black-bg-color);
   outline-offset: -2px;
+}
+
+.button_transparent:hover {
+  background-color: var(--black-bg-color);
+  color: var(--white-color);
 }
