@@ -5,6 +5,8 @@
   --black-bg-color: #1F1F1F;
   --yellow-color: #FBCE51;
   --red-color: #F54932;
+  --grey-color: #D0D0D0;
+  --blue-color: #3057A2;
   width: 100vw;
   min-height: 100vh;
   margin: 0 auto;
@@ -15,6 +17,7 @@
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
+  font-variant-numeric: lining-nums;
   color: var(--black-color);
 }
 
@@ -32,6 +35,7 @@
 }
 
 .heading {
+  margin: 0;
   font-family: 'Merriweather', serif;
   font-size: 60px;
   font-weight: 400;
@@ -40,11 +44,23 @@
 }
 
 .subtitle {
+  margin: 0;
   font-family: 'Merriweather', serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 135%;
   text-transform: uppercase;
+}
+
+.base-text {
+  margin: 0;
+  font-size: 20px;
+  line-height: 120%;
+  font-weight: 400;
+}
+
+.semi-bold-text {
+  font-weight: 600;
 }
 
 .subtitle__span {
