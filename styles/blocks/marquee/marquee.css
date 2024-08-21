@@ -1,0 +1,53 @@
+@keyframes movement {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 12px));
+  }
+}
+
+.marquee {
+  padding: 18px 0;
+  box-sizing: border-box;
+  background-color: var(--red-color);
+}
+
+.marquee__wrap {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  overflow: hidden;
+  gap: 12px;
+}
+
+.marquee__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 12px;
+  animation: movement 20s linear infinite;
+}
+
+.marquee__item {
+  width: max-content;
+  flex-shrink: 0;
+}
+
+.marquee__item_text {
+  font-family: 'Merriweather', serif;
+  font-size: 22px;
+  line-height: 110%;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.marquee__item_ellipse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--white-color);
+}

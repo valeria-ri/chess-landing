@@ -3,6 +3,7 @@
   --beige-color: #E9DED4;
   --black-color: #313131;
   --black-bg-color: #1F1F1F;
+  --red-color: #F54932;
   width: 100vw;
   min-height: 100vh;
   margin: 0 auto;
@@ -17,6 +18,7 @@
 }
 
 .center-block {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
