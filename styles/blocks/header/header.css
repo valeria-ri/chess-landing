@@ -1,0 +1,22 @@
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.header__navigation {
+  padding-top: 26px;
+}
+
+.header__logo {
+  text-decoration: none;
+}
+
+.header__logo-img {
+  width: 246px;
+  height: auto;
+  object-fit: contain;
+}
