@@ -6,6 +6,7 @@
   --yellow-color: #FBCE51;
   --red-color: #F54932;
   --grey-color: #D0D0D0;
+  --grey-bg-color: #D6D6D6;
   --blue-color: #3057A2;
   width: 100vw;
   min-height: 100vh;
@@ -83,6 +84,7 @@
 
 .button {
   display: block;
+  margin: 0;
   padding: 16px 49px;
   box-sizing: border-box;
   border-radius: 66px;
@@ -114,4 +116,31 @@
 .button_transparent:hover {
   background-color: var(--black-bg-color);
   color: var(--white-color);
+}
+
+.nav-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--black-color);
+  background-image: url(../../../images/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 14px center;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: var(--yellow-color);
+}
+
+.nav-button:disabled {
+  background-color: var(--grey-bg-color);
+}
+
+.nav-button_next {
+  /* transform: scaleX(-1); */
+  transform: rotate(180deg);
 }

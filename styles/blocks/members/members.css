@@ -1,0 +1,48 @@
+.members__content {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-auto-rows: min-content;
+  align-content: center;
+  gap: 55px 0;
+  padding-bottom: 140px;
+  box-sizing: border-box;
+}
+
+.members__navigation {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.members__counter {
+  display: flex;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.members__counter-number {
+  margin: 0;
+  font-size: 16px;
+  line-height: 120%;
+}
+
+.members__counter-number_line, 
+.members__counter-number_total {
+  opacity: 60%;
+}
+
+.members__slider {
+  grid-column: 1 / -1;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.members__grid {
+  min-width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}

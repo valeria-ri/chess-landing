@@ -224,10 +224,38 @@
             </div>
           </div>
         </section>
+        <section class="members center-block">
+          <div class="members__content content">
+            <h2 class="members__heading title">Участники турнира</h2>
+            <nav class="members__navigation">
+              <button type="button" id="members-prev-button" class="members__nav-button nav-button nav-button_prev"></button>
+              <div aria-label="счётчик слайдов" class="members__counter">
+                <span class="members__counter-number members__counter-number_current">0</span>
+                <span class="members__counter-number members__counter-number_line">/</span>
+                <span class="members__counter-number members__counter-number_total">0</span>
+              </div>
+              <button type="button" id="members-next-button" class="members__nav-button nav-button nav-button_next"></button>
+            </nav>
+            <div class="members__slider">
+              <ul class="members__grid" id="members-list"></ul>
+            </div>
+          </div>
+        </section>
       </main>
       <footer class="footer"></footer>
-
-      <!-- <h1 class="heading">Этапы преображения Васюков <span class="span">Будущие источники обогащения васюкинцев</span></h1> -->
     </div>
+    <template class="member-template" id="member-template">
+      <li class="member">
+        <div class="member__info">
+          <img src="./images/member.png" alt="" class="member__image">
+          <div class="member__text-info">
+            <h3 class="member__name"></h3>
+            <p class="member__rank base-text"></p>
+          </div>
+        </div>
+        <a href="#" class="member__link">Подробнее</a>
+      </li>
+    </template>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>
