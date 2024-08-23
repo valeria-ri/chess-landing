@@ -11,3 +11,7 @@
 @import url(./blocks/members/members.css);
 @import url(./blocks/member/member.css);
 @import url(./blocks/footer/footer.css);
+
+html {
+  scroll-behavior: smooth;
+}
