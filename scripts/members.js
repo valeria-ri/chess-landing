@@ -6,6 +6,7 @@ const prevMemberButton = document.getElementById('members-prev-button');
 const currentCount = document.querySelector('.members__counter-number_current');
 const totalCount = document.querySelector('.members__counter-number_total');
 let counter = 0;
+let autoSlideInterval;
 
 const updateCounter = () => {
   currentCount.textContent = counter + 1;
@@ -41,7 +42,16 @@ const getCardWidth = () => {
 const nextCard = () => {
   const cardWidth = getCardWidth();
   const firstCard = carousel.querySelector('.member');
-  carousel.append(firstCard);
+
+  carousel.style.transform = `translateX(-${cardWidth + 20}px)`;
+
+  setTimeout(() => {
+    carousel.append(firstCard);
+    carousel.style.transition = 'none';
+    carousel.style.transform = 'translateX(0)';
+    setTimeout(() => carousel.style.transition = '', 50);
+  }, 500);
+
   counter++;
   if (counter > members.length - 1) {
     counter = 0;
@@ -50,8 +60,17 @@ const nextCard = () => {
 }
 
 const prevCard = () => {
+  const cardWidth = getCardWidth();
   const lastCard = carousel.querySelector('.member:last-child');
   carousel.insertBefore(lastCard, carousel.firstChild);
+  carousel.style.transition = 'none';
+  carousel.style.transform = `translateX(-${cardWidth + 20}px)`;
+
+  setTimeout(() => {
+    carousel.style.transition = '';
+    carousel.style.transform = `translateX(0)`;
+  }, 50);
+
   counter --;
   if (counter < 0) {
     counter = members.length - 1;
@@ -59,5 +78,23 @@ const prevCard = () => {
   updateCounter();
 }
 
-nextMemberButton.addEventListener('click', nextCard, false);
-prevMemberButton.addEventListener('click', prevCard, false);
+const startAutoSlide = () => {
+  autoSlideInterval = setInterval(nextCard, 4000);
+};
+
+const resetAutoSlide = () => {
+  clearInterval(autoSlideInterval);
+  startAutoSlide();
+};
+
+nextMemberButton.addEventListener('click', () => {
+  nextCard();
+  resetAutoSlide();
+}, false);
+
+prevMemberButton.addEventListener('click', () => {
+  prevCard();
+  resetAutoSlide();
+}, false);
+
+startAutoSlide();

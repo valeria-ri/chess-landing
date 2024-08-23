@@ -44,5 +44,5 @@
   margin: 0;
   display: flex;
   gap: 20px;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in-out;
 }
