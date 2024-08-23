@@ -7,6 +7,10 @@ const currentCount = document.querySelector('.members__counter-number_current');
 const totalCount = document.querySelector('.members__counter-number_total');
 let counter = 0;
 
+const updateCounter = () => {
+  currentCount.textContent = counter + 1;
+};
+
 const addCards = () => {
   members.forEach((item) => {
     const card = document
@@ -35,6 +39,7 @@ const getCardWidth = () => {
 };
 
 const nextCard = () => {
+  const cardWidth = getCardWidth();
   const firstCard = carousel.querySelector('.member');
   carousel.append(firstCard);
   counter++;
