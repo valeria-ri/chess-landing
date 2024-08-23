@@ -1,4 +1,5 @@
 .members__content {
+  padding-top: 200px;
   display: grid;
   grid-template-columns: 1fr max-content;
   grid-auto-rows: min-content;
@@ -43,6 +44,7 @@
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: nowrap;
   gap: 20px;
   transition: transform 0.5s ease-in-out;
 }

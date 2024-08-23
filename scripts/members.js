@@ -39,11 +39,19 @@ const getCardWidth = () => {
   return memberCard ? memberCard.offsetWidth : 0;
 };
 
+const getGapSize = () => {
+  const carouselStyle = getComputedStyle(carousel);
+  const gap = carouselStyle.gap || carouselStyle.columnGap;
+  return parseInt(gap) || 0;
+};
+
+
 const nextCard = () => {
   const cardWidth = getCardWidth();
+  const gapSize = getGapSize();
   const firstCard = carousel.querySelector('.member');
 
-  carousel.style.transform = `translateX(-${cardWidth + 20}px)`;
+  carousel.style.transform = `translateX(-${cardWidth + gapSize}px)`;
 
   setTimeout(() => {
     carousel.append(firstCard);
@@ -61,10 +69,11 @@ const nextCard = () => {
 
 const prevCard = () => {
   const cardWidth = getCardWidth();
+  const gapSize = getGapSize();
   const lastCard = carousel.querySelector('.member:last-child');
   carousel.insertBefore(lastCard, carousel.firstChild);
   carousel.style.transition = 'none';
-  carousel.style.transform = `translateX(-${cardWidth + 20}px)`;
+  carousel.style.transform = `translateX(-${cardWidth + gapSize}px)`;
 
   setTimeout(() => {
     carousel.style.transition = '';
