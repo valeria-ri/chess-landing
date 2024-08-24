@@ -1,18 +1,44 @@
-@keyframes scaleAnimation {
+@-webkit-keyframes scaleAnimation {
   0% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@-webkit-keyframes rotateAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
   }
 }
 
 @keyframes rotateAnimation {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
   }
 }
 
@@ -41,13 +67,16 @@
   padding-bottom: 128px;
   min-height: 700px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .cover__sun {
   width: 660px;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: absolute;
   bottom: 84px;
   right: 33px;
@@ -56,7 +85,8 @@
 .cover__city {
   width: 1627px;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: absolute;
   bottom: 0;
   left: calc(50% - 804px);
@@ -65,7 +95,8 @@
 
 .cover__chess {
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: absolute;
 }
 
@@ -74,7 +105,8 @@
   bottom: 20px;
   right: 45px;
   z-index: 4;
-  animation: scaleAnimation 3s infinite alternate ease-in-out;
+  -webkit-animation: scaleAnimation 3s infinite alternate ease-in-out;
+          animation: scaleAnimation 3s infinite alternate ease-in-out;
 }
 
 .cover__chess_knight {
@@ -82,41 +114,59 @@
   bottom: -51px;
   right: 334px;
   z-index: 4;
-  animation: scaleAnimation 3s infinite alternate ease-in-out;
+  -webkit-animation: scaleAnimation 3s infinite alternate ease-in-out;
+          animation: scaleAnimation 3s infinite alternate ease-in-out;
 }
 
 .cover__chess_queen {
   width: 146px;
   bottom: 270px;
   right: 159px;
-  animation: rotateAnimation 2s infinite alternate ease-in-out;
+  -webkit-animation: rotateAnimation 2s infinite alternate ease-in-out;
+          animation: rotateAnimation 2s infinite alternate ease-in-out;
 }
 
 .cover__chess_king {
   width: 130px;
   bottom: 164px;
   right: 507px;
-  animation: rotateAnimation 2s infinite alternate ease-in-out;
+  -webkit-animation: rotateAnimation 2s infinite alternate ease-in-out;
+          animation: rotateAnimation 2s infinite alternate ease-in-out;
 }
 
 .cover__info-block {
   max-width: 545px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 40px;
   z-index: 10;
 }
 
 .cover__info {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 24px;
 }
 
 .cover__heading-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .cover__heading {
@@ -142,6 +192,8 @@
 }
 
 .cover__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 16px;
 }
@@ -184,7 +236,9 @@
 
   .cover__chess_queen {
     width: 103px;
-    transform: rotate(8deg);
+    -webkit-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+            transform: rotate(8deg);
     right: 150px;
     bottom: 225px;
   }
@@ -205,7 +259,10 @@
   }
 
   .cover__navigation {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .cover__nav-button {
@@ -217,7 +274,9 @@
   .cover__content {
     padding-top: 90px;
     min-height: 774px;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .cover__sun {

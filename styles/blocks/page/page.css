@@ -25,15 +25,20 @@
 
 .center-block {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .content {
   width: 100%;
   max-width: 1366px;
   padding: 0 72px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .heading {
@@ -87,13 +92,16 @@
   display: block;
   margin: 0;
   padding: 16px 49px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 66px;
   font-size: 16px;
   font-weight: 500;
   line-height: 130%;
   text-align: center;
   text-decoration: none;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -120,6 +128,8 @@
   background-image: url(../../../images/arrow.svg);
   background-repeat: no-repeat;
   background-position: 14px center;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 
@@ -128,7 +138,9 @@
 }
 
 .nav-button_next {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 @media (hover: hover) {
