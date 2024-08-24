@@ -14,3 +14,9 @@
   line-height: 120%;
   opacity: 60%;
 }
+
+@media screen and (max-width: 767px) {
+  .footer__content {
+    padding-bottom: 60px;
+  }
+}

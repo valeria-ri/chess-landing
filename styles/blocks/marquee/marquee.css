@@ -51,3 +51,13 @@
   border-radius: 50%;
   background-color: var(--white-color);
 }
+
+@media screen and (max-width: 767px) {
+  .marquee {
+    padding: 10px 0;
+  }
+
+  .marquee__item_text {
+    font-size: 16px;
+  }
+}

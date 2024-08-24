@@ -15,8 +15,18 @@
   text-decoration: none;
 }
 
-.header__logo-img {
+.header__logo-image {
   width: 246px;
   height: auto;
   object-fit: contain;
+}
+
+@media screen and (max-width: 767px) {
+  .header__navigation {
+    padding-top: 18px;
+  }
+
+  .header__logo-image {
+    width: 213px;
+  }
 }

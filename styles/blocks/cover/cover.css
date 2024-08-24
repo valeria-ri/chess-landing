@@ -59,17 +59,20 @@
 }
 
 .cover__chess_knight {
+  width: 197px;
   bottom: -51px;
   right: 334px;
   z-index: 4;
 }
 
 .cover__chess_queen {
+  width: 146px;
   bottom: 270px;
   right: 159px;
 }
 
 .cover__chess_king {
+  width: 130px;
   bottom: 164px;
   right: 507px;
 }
@@ -123,4 +126,108 @@
 
 .cover__nav-button {
   width: calc(50% - 8px);
+}
+
+@media screen and (max-width: 1365px) {
+  .cover__content {
+    min-height: 1000px;
+  }
+
+  .cover__city {
+    left: auto;
+    right: -140px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .cover__sun {
+    width: 480px;
+    right: 100px;
+  }
+
+  .cover__city {
+    width: 1257px;
+    right: -109px;
+  }
+
+  .cover__chess_pawn {
+    display: none;
+  }
+
+  .cover__chess_knight {
+    width: 147px;
+    right: 240px;
+    bottom: -30px;
+  }
+
+  .cover__chess_queen {
+    width: 103px;
+    transform: rotate(8deg);
+    right: 150px;
+    bottom: 225px;
+  }
+
+  .cover__chess_king {
+    width: 95px;
+    right: 400px;
+    bottom: 155px;
+  }
+
+  .cover__info-block {
+    max-width: 437px;
+    gap: 32px;
+  }
+
+  .cover__info-text {
+    text-align: left;
+  }
+
+  .cover__navigation {
+    flex-direction: column;
+  }
+
+  .cover__nav-button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cover__content {
+    padding-top: 90px;
+    min-height: 774px;
+    justify-content: center;
+  }
+
+  .cover__sun {
+    width: 297px;
+    right: 47px;
+    bottom: 67px;
+  }
+
+  .cover__city {
+    width: 886px;
+  }
+
+  .cover__chess_knight {
+    width: 96px;
+    right: 131px;
+    bottom: -20px;
+  }
+
+  .cover__chess_queen {
+    width: 62px;
+    right: 85px;
+    bottom: 160px;
+  }
+
+  .cover__chess_king {
+    width: 62px;
+    right: 252px;
+    bottom: 110px;
+  }
+
+  .cover__info-block {
+    width: 100%;
+    max-width: 335px;
+  }
 }

@@ -9,15 +9,54 @@
   gap: 60px;
 }
 
-.lecture__img-span {
-  /* display: block; */
+.lecture__image-span {
   display: none;
-  padding: 20px 0;
+  padding: 22px 0;
   box-sizing: border-box;
+  text-align: center;
 }
 
-.lecture__image {
+.lecture__inline-image {
+  width: 100%;
+}
+
+.lecture__right-image {
   width: 394px;
   height: auto;
   object-fit: contain;
+}
+
+@media screen and (max-width: 1000px) {
+  .lecture__content {
+    gap: 40px;
+  }
+
+  .lecture__right-image {
+    width: 360px;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .lecture__content {
+    justify-content: center;
+  }
+
+  .lecture__text {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .lecture__right-image {
+    display: none;
+  }
+
+  .lecture__image-span {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .lecture {
+    padding-top: 48px;
+  }
 }

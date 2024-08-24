@@ -48,3 +48,34 @@
   gap: 20px;
   transition: transform 0.5s ease-in-out;
 }
+
+@media screen and (max-width: 1000px) {
+  .members__content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .members__heading {
+    justify-self: flex-start;
+  }
+
+  .members__navigation {
+    grid-row: 3;
+  }
+
+  .members__grid {
+    gap: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .members__content {
+    gap: 40px 0;
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+
+  .members__navigation {
+    gap: 12px;
+  }
+}
