@@ -102,21 +102,11 @@
   color: var(--white-color);
 }
 
-.button_black:hover {
-  background-color: var(--yellow-color);
-  color: var(--black-bg-color);
-}
-
 .button_transparent {
   background-color: transparent;
   color: var(--black-bg-color);
   outline: 2px solid var(--black-bg-color);
   outline-offset: -2px;
-}
-
-.button_transparent:hover {
-  background-color: var(--black-bg-color);
-  color: var(--white-color);
 }
 
 .nav-button {
@@ -133,16 +123,32 @@
   transition: background-color 0.3s ease;
 }
 
-.nav-button:hover {
-  background-color: var(--yellow-color);
-}
-
 .nav-button:disabled {
   background-color: var(--grey-bg-color);
 }
 
 .nav-button_next {
   transform: rotate(180deg);
+}
+
+@media (hover: hover) {
+  .button_black:hover {
+    background-color: var(--yellow-color);
+    color: var(--black-bg-color);
+  }
+
+  .button_transparent:hover {
+    background-color: var(--black-bg-color);
+    color: var(--white-color);
+  }
+
+  .nav-button:hover {
+    background-color: var(--yellow-color);
+  }
+
+  .nav-button:disabled:hover {
+    background-color: var(--grey-bg-color);
+  }
 }
 
 @media screen and (max-width: 1365px) {

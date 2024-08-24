@@ -64,10 +64,13 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.member__link:hover {
-  color: var(--white-color);
-  background-color: var(--blue-color);
+@media (hover: hover) {
+  .member__link:hover {
+    color: var(--white-color);
+    background-color: var(--blue-color);
+  }
 }
+
 
 @media screen and (max-width: 1000px) {
   .member {
