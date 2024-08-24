@@ -1,5 +1,5 @@
 .stages__content {
-  padding-top: 165px;
+  padding-top: 175px;
 }
 
 .stages__heading {
@@ -13,6 +13,7 @@
   text-transform: none;
   max-width: 280px;
   color: var(--blue-color);
+  padding-left: 5px;
 }
 
 .stages__content {
@@ -214,5 +215,6 @@
 
   .stages__heading_span {
     padding-top: 12px;
+    padding-left: 0;
   }
 }
