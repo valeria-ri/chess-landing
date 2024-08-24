@@ -1,3 +1,21 @@
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
 .cover {
   background-color: var(--beige-color);
   overflow: hidden;
@@ -56,6 +74,7 @@
   bottom: 20px;
   right: 45px;
   z-index: 4;
+  animation: scaleAnimation 3s infinite alternate ease-in-out;
 }
 
 .cover__chess_knight {
@@ -63,18 +82,21 @@
   bottom: -51px;
   right: 334px;
   z-index: 4;
+  animation: scaleAnimation 3s infinite alternate ease-in-out;
 }
 
 .cover__chess_queen {
   width: 146px;
   bottom: 270px;
   right: 159px;
+  animation: rotateAnimation 2s infinite alternate ease-in-out;
 }
 
 .cover__chess_king {
   width: 130px;
   bottom: 164px;
   right: 507px;
+  animation: rotateAnimation 2s infinite alternate ease-in-out;
 }
 
 .cover__info-block {
